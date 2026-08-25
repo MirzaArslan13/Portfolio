@@ -1,45 +1,59 @@
-/* ===== Reset ===== */
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ===== CSS Variables ===== */
+
+/* =========================================================
+   CSS VARIABLES
+========================================================= */
 
 :root {
-  --bg-color: #0f172a;
-  --text-color: #f8fafc;
-  --text-secondary: #94a3b8;
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --text-secondary: #94a3b8;
 
-  --accent-color: #3b82f6;
-  --accent-hover: #60a5fa;
+    --accent-color: #3b82f6;
+    --accent-hover: #60a5fa;
 
-  --border-color: rgba(255, 255, 255, 0.15);
-  --shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 
-  --container-width: 1200px;
-  --radius: 12px;
+    --container-width: 1200px;
+    --radius: 12px;
 }
 
-/* ===== Global ===== */
+
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-/* ==================================================
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================================================
    REUSABLE CONTAINER
-================================================== */
+========================================================= */
 
 .container {
+    width: 100%;
     max-width: var(--container-width);
 
     margin: 0 auto;
@@ -52,368 +66,283 @@ body {
 
     align-items: center;
 }
-/* ==================================================
+
+
+/* =========================================================
    HEADER
-================================================== */
+========================================================= */
 
 .nav-bar {
-  position: fixed;
+    position: fixed;
 
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  background-color: var(--bg-color);
-
-  box-shadow: var(--shadow);
-
-  z-index: 1000;
-}
-
-/* ===== Logo ===== */
-
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-
-  color: var(--text-color);
-
-  text-decoration: none;
-}
-
-/* ===== Navigation ===== */
-
-.nav-list {
-  display: flex;
-
-  list-style: none;
-
-  gap: 2rem;
-}
-
-.nav-link {
-  color: var(--text-color);
-
-  text-decoration: none;
-
-  font-weight: 500;
-
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--accent-color);
-}
-
-/* ===== Resume ===== */
-
-.nav-resume {
-  text-decoration: none;
-
-  color: var(--text-color);
-
-  border: 1px solid var(--accent-color);
-
-  padding: 10px 20px;
-
-  border-radius: var(--radius);
-
-  transition: all 0.3s ease;
-}
-
-.nav-resume:hover {
-  background-color: var(--accent-color);
-
-  transform: translateY(-2px);
-}
-
-/* ==================================================
-   HAMBURGER BUTTON
-================================================== */
-
-.menu-toggle {
-  display: none;
-
-  background: transparent;
-
-  border: none;
-
-  cursor: pointer;
-
-  padding: 5px;
-}
-
-.menu-toggle span {
-  display: block;
-
-  width: 24px;
-  height: 2px;
-
-  margin: 5px 0;
-
-  background-color: var(--text-color);
-
-  transition: all 0.3s ease;
-}
-
-/* ==================================================
-   HERO
-================================================== */
-
-.hero {
-  min-height: 100vh;
-
-  display: flex;
-
-  align-items: center;
-
-  padding-top: 80px;
-}
-
-/* ===== Hero Layout ===== */
-
-.hero .container {
-  gap: 4rem;
-}
-
-/* ===== Hero Content ===== */
-
-.hero-content {
-  flex: 1;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 1rem;
-}
-
-/* ===== Hero Typography ===== */
-
-.hero-greeting {
-  font-size: 1.1rem;
-
-  font-weight: 500;
-
-  color: var(--text-secondary);
-}
-
-.hero-title {
-  font-size: 46px;
-
-  font-weight: 700;
-
-  line-height: 1.2;
-}
-
-.hero-role {
-  font-size: 1.6rem;
-
-  font-weight: 600;
-
-  color: var(--accent-color);
-}
-
-.hero-description {
-  max-width: 550px;
-
-  font-size: 1rem;
-
-  line-height: 1.8;
-
-  color: var(--text-secondary);
-}
-
-/* ===== Hero Buttons ===== */
-
-.hero-buttons {
-  display: flex;
-
-  gap: 1rem;
-
-  margin-top: 1rem;
-}
-
-.hero-project,
-.hero-contact {
-  text-decoration: none;
-
-  padding: 12px 24px;
-
-  border-radius: var(--radius);
-
-  font-weight: 500;
-
-  transition: all 0.3s ease;
-}
-
-.hero-project {
-  background-color: var(--accent-color);
-
-  color: var(--text-color);
-}
-
-.hero-project:hover {
-  background-color: var(--accent-hover);
-}
-
-.hero-contact {
-  border: 1px solid var(--accent-color);
-
-  color: var(--text-color);
-}
-
-.hero-contact:hover {
-  background-color: var(--accent-color);
-}
-
-/* ===== Hero Image ===== */
-
-.hero-image {
-  flex: 1;
-
-  display: flex;
-
-  justify-content: center;
-}
-
-.hero-image img {
-  width: 400px;
-
-  max-width: 100%;
-
-  border-radius: 24px;
-
-  border: 2px solid var(--border-color);
-}
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 768px) {
-  /* ===== Header ===== */
-
-  .nav-bar .container {
-    padding: 16px 24px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-
-    position: absolute;
-
-    top: 100%;
+    top: 0;
     left: 0;
 
     width: 100%;
 
-    padding: 20px 24px;
-
     background-color: var(--bg-color);
 
     box-shadow: var(--shadow);
-  }
 
-  .nav-menu.active {
-    display: block;
-  }
+    z-index: 1000;
+}
 
-  .nav-list {
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nav-logo {
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    color: var(--text-color);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-list {
     display: flex;
 
-    flex-direction: column;
+    list-style: none;
 
-    align-items: center;
-
-    gap: 1.5rem;
-  }
-
-  .nav-resume {
-    padding: 8px 16px;
-  }
-
-  /* ===== Hamburger → X ===== */
-
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  /* ===== Hero ===== */
-
-  .hero {
-    padding: 100px 24px 60px;
-  }
-
-  .hero .container {
-    flex-direction: column;
-
-    text-align: center;
-
-    gap: 40px;
-  }
-
-  .hero-content {
-    align-items: center;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-role {
-    font-size: 22px;
-  }
-
-  .hero-description {
-    max-width: 100%;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-
-    flex-wrap: wrap;
-  }
-
-  .hero-image img {
-    width: 320px;
-
-    max-width: 100%;
-  }
+    gap: 2rem;
 }
+
+.nav-link {
+    color: var(--text-color);
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+
 /* =========================================================
-   ABOUT SECTION
-   ========================================================= */
+   RESUME BUTTON
+========================================================= */
 
-.about {
-    /* min-height: 100vh; */
+.nav-resume {
+    text-decoration: none;
 
-    padding: 100px 0;
+    color: var(--text-color);
+
+    border: 1px solid var(--accent-color);
+
+    padding: 10px 20px;
+
+    border-radius: var(--radius);
+
+    transition: all 0.3s ease;
 }
 
-.about .container {
-    /* display: flex; */
+.nav-resume:hover {
+    background-color: var(--accent-color);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    margin: 5px 0;
+
+    background-color: var(--text-color);
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    padding: 100px 0 40px;
+
+    display: flex;
 
     align-items: center;
+}
 
+.hero .container {
     gap: 4rem;
 }
 
 
-/* ==================== ABOUT CONTENT ==================== */
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+
+/* =========================================================
+   HERO TYPOGRAPHY
+========================================================= */
+
+.hero-greeting {
+    font-size: 1.1rem;
+
+    font-weight: 500;
+
+    color: var(--text-secondary);
+}
+
+.hero-title {
+    font-size: 46px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.hero-role {
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+    color: var(--accent-color);
+}
+
+.hero-description {
+    max-width: 550px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+}
+
+.hero-project,
+.hero-contact {
+    text-decoration: none;
+
+    padding: 12px 24px;
+
+    border-radius: var(--radius);
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.hero-project {
+    background-color: var(--accent-color);
+
+    color: var(--text-color);
+}
+
+.hero-project:hover {
+    background-color: var(--accent-hover);
+}
+
+.hero-contact {
+    border: 1px solid var(--accent-color);
+
+    color: var(--text-color);
+}
+
+.hero-contact:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 400px;
+
+    max-width: 100%;
+
+    border-radius: 24px;
+
+    border: 2px solid var(--border-color);
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about {
+    padding: 60px 0;
+}
+
+.about .container {
+    gap: 4rem;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
 
 .about-section {
     flex: 1;
@@ -440,7 +369,9 @@ body {
 }
 
 
-/* ==================== LANGUAGES ==================== */
+/* =========================================================
+   ABOUT LANGUAGES
+========================================================= */
 
 .language {
     display: flex;
@@ -467,7 +398,9 @@ body {
 }
 
 
-/* ==================== ABOUT VISUAL ==================== */
+/* =========================================================
+   ABOUT VISUAL
+========================================================= */
 
 .about-visual {
     position: relative;
@@ -533,7 +466,6 @@ body {
 
 .dot {
     width: 10px;
-
     height: 10px;
 
     border-radius: 50%;
@@ -592,16 +524,11 @@ body {
 
 /* =========================================================
    SKILLS SECTION
-   ========================================================= */
+========================================================= */
 
 .skills {
-    /* min-height: 100vh; */
-
-    padding: 100px 0;
+    padding: 60px 0;
 }
-
-
-/* ==================== SKILLS CONTAINER ==================== */
 
 .skills .container {
     display: flex;
@@ -610,11 +537,13 @@ body {
 
     align-items: flex-start;
 
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 
-/* ==================== SKILLS HEADING ==================== */
+/* =========================================================
+   SKILLS HEADING
+========================================================= */
 
 .skills-title {
     font-size: 36px;
@@ -637,7 +566,9 @@ body {
 }
 
 
-/* ==================== SKILL CATEGORY ==================== */
+/* =========================================================
+   SKILLS CATEGORY
+========================================================= */
 
 .skills-category {
     width: 100%;
@@ -652,7 +583,9 @@ body {
 }
 
 
-/* ==================== SKILLS GRID ==================== */
+/* =========================================================
+   SKILLS GRID
+========================================================= */
 
 .skills-grid {
     display: grid;
@@ -665,7 +598,9 @@ body {
 }
 
 
-/* ==================== SKILL CARD ==================== */
+/* =========================================================
+   SKILL CARD
+========================================================= */
 
 .skills-card {
     padding: 20px;
@@ -705,22 +640,125 @@ body {
 
 
 /* =========================================================
-   NAVBAR SCROLL OFFSET
-   ========================================================= */
-
-section {
-    scroll-margin-top: 90px;
-}
-
-
-/* =========================================================
-   MOBILE — ABOUT
-   ========================================================= */
+   MOBILE — 768px
+========================================================= */
 
 @media (max-width: 768px) {
 
+    /* ================= HEADER ================= */
+
+    .nav-bar .container {
+        padding: 16px 24px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px 24px;
+
+        background-color: var(--bg-color);
+
+        box-shadow: var(--shadow);
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1.5rem;
+    }
+
+    .nav-resume {
+        padding: 8px 16px;
+    }
+
+
+    /* ================= HAMBURGER → X ================= */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        padding: 100px 24px 50px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .hero-content {
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-role {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 320px;
+
+        max-width: 100%;
+    }
+
+
+    /* ================= ABOUT ================= */
+
     .about {
-        padding: 90px 24px 70px;
+        padding: 70px 24px 60px;
     }
 
     .about .container {
@@ -733,6 +771,12 @@ section {
 
     .about-section {
         width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
     }
 
     .about-title {
@@ -754,17 +798,22 @@ section {
     .editor-window {
         max-width: 460px;
     }
-}
 
 
-/* =========================================================
-   MOBILE — SKILLS
-   ========================================================= */
-
-@media (max-width: 768px) {
+    /* ================= SKILLS ================= */
 
     .skills {
-        padding: 90px 24px 70px;
+        padding: 70px 24px 60px;
+    }
+
+    .skills .container {
+        width: 100%;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 1.5rem;
     }
 
     .skills-title {
@@ -773,6 +822,16 @@ section {
 
     .skills-description {
         max-width: 100%;
+
+        text-align: center;
+    }
+
+    .skills-category {
+        width: 100%;
+    }
+
+    .skills-category h3 {
+        text-align: center;
     }
 
     .skills-grid {
@@ -783,21 +842,131 @@ section {
 
     .skills-card {
         padding: 18px;
+
+        text-align: center;
     }
+}
+
+.skill-level {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 12px;
+
+    padding: 5px 10px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    color: var(--text-secondary);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.level-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--accent-color);
+}
+
+.skills-card {
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent-color);
+
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
 }
 
 
 /* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+   SMALL MOBILE — 480px
+========================================================= */
 
 @media (max-width: 480px) {
 
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-role {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-project,
+    .hero-contact {
+        width: 100%;
+
+        max-width: 220px;
+
+        text-align: center;
+    }
+
+    .about {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .about-title {
+        font-size: 30px;
+    }
+
+    .editor-body {
+        padding: 18px 14px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    .skills {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
+
+        gap: 15px;
     }
 
     .skills-card {
+        width: 100%;
+
         text-align: center;
     }
 }
